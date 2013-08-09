@@ -209,7 +209,7 @@
 
                     progressbar = $(progressWidget());
                     if (allOptions.viewports.progress) {
-                        $(allOptions.viewports.progress).append(progressbar);
+                        $el.parent().find(allOptions.viewports.progress).append(progressbar);
                     } else {
                         progressbar.insertAfter($el);
                     }
