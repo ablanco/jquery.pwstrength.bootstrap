@@ -18,7 +18,7 @@
             // Options
             minChar: 8,
             errorMessages: {
-                password_to_short: "The Password is too short",
+                password_too_short: "<font color='red'>The Password is too short</font>",
                 same_as_username: "Your password cannot be the same as your username"
             },
             scores: [17, 26, 40, 50],
@@ -71,7 +71,7 @@
                         lenScore = Math.pow(wordlen, options.raisePower);
                     if (wordlen < options.minChar) {
                         lenScore = (lenScore + score);
-                        options.errors.push(options.errorMessages.password_to_short);
+                        options.errors.push(options.errorMessages.password_too_short);
                     }
                     return lenScore;
                 },
@@ -131,32 +131,32 @@
             }
 
             if (score < options.scores[0]) {
-                progressbar.addClass("progress-danger").removeClass("progress-warning").removeClass("progress-success");
-                progressbar.find(".bar").css("width", "5%");
+                progressbar.find(".progress-bar").addClass("progress-bar-danger").removeClass("progress-bar-warning").removeClass("progress-bar-success");
+                progressbar.find(".progress-bar").css("width", "5%");
                 if (options.showVerdicts) {
                     $verdict.text(options.verdicts[0]);
                 }
             } else if (score >= options.scores[0] && score < options.scores[1]) {
-                progressbar.addClass("progress-danger").removeClass("progress-warning").removeClass("progress-success");
-                progressbar.find(".bar").css("width", "25%");
+                progressbar.find(".progress-bar").addClass("progress-bar-danger").removeClass("progress-bar-warning").removeClass("progress-bar-success");
+                progressbar.find(".progress-bar").css("width", "25%");
                 if (options.showVerdicts) {
                     $verdict.text(options.verdicts[1]);
                 }
             } else if (score >= options.scores[1] && score < options.scores[2]) {
-                progressbar.addClass("progress-warning").removeClass("progress-danger").removeClass("progress-success");
-                progressbar.find(".bar").css("width", "50%");
+                progressbar.find(".progress-bar").addClass("progress-bar-warning").removeClass("progress-bar-danger").removeClass("progress-bar-success");
+                progressbar.find(".progress-bar").css("width", "50%");
                 if (options.showVerdicts) {
                     $verdict.text(options.verdicts[2]);
                 }
             } else if (score >= options.scores[2] && score < options.scores[3]) {
-                progressbar.addClass("progress-warning").removeClass("progress-danger").removeClass("progress-success");
-                progressbar.find(".bar").css("width", "75%");
+                progressbar.find(".progress-bar").addClass("progress-bar-warning").removeClass("progress-bar-danger").removeClass("progress-bar-success");
+                progressbar.find(".progress-bar").css("width", "75%");
                 if (options.showVerdicts) {
                     $verdict.text(options.verdicts[3]);
                 }
             } else if (score >= options.scores[3]) {
-                progressbar.addClass("progress-success").removeClass("progress-warning").removeClass("progress-danger");
-                progressbar.find(".bar").css("width", "100%");
+                progressbar.find(".progress-bar").addClass("progress-bar-success").removeClass("progress-bar-warning").removeClass("progress-bar-danger");
+                progressbar.find(".progress-bar").css("width", "100%");
                 if (options.showVerdicts) {
                     $verdict.text(options.verdicts[4]);
                 }
@@ -183,7 +183,7 @@
         },
 
         progressWidget = function () {
-            return '<div class="progress"><div class="bar"></div></div>';
+            return '<div class="progress"><div class="progress-bar"></div></div>';
         },
 
         methods = {
