@@ -34,7 +34,7 @@ var ui = {};
     };
 
     ui.getUIElements = function (options, $el) {
-        var $container, selector, result;
+        var $container, selector, result, target;
 
         if (options.instances.viewports) {
             return options.instances.viewports;
@@ -48,7 +48,15 @@ var ui = {};
         } else {
             selector = "div.progress";
         }
-        result.$progressbar = ui.findElement($container, options.ui.viewports.progress, selector);
+        
+        if(options.ui.progressBarLocation != false){
+            target = $(options.ui.progressBarLocation);
+        }else{
+            target = $container;
+        }
+
+        result.$progressbar = ui.findElement(target, options.ui.viewports.progress, selector);
+        
         if (options.ui.showVerdictsInsideProgressBar) {
             result.$verdict = result.$progressbar.find("span.password-verdict");
         }
@@ -89,7 +97,11 @@ var ui = {};
         if (options.ui.viewports.progress) {
             $container.find(options.ui.viewports.progress).append(progressbar);
         } else {
-            $(progressbar).insertAfter($el);
+           if(options.ui.progressBarLocation != false){
+                $(progressbar).appendTo(options.ui.progressBarLocation);
+            }else{
+                $(progressbar).insertAfter($el);
+            }
         }
     };
 
