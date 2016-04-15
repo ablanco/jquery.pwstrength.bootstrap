@@ -70,6 +70,7 @@ defaultOptions.ui.colorClasses = [
     "danger", "danger", "danger", "warning", "warning", "success"
 ];
 defaultOptions.ui.showProgressBar = true;
+defaultOptions.ui.progressBarLocation = false;
 defaultOptions.ui.showPopover = false;
 defaultOptions.ui.popoverPlacement = "bottom";
 defaultOptions.ui.showStatus = false;
