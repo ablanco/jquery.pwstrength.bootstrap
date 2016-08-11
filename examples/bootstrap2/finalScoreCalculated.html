@@ -49,15 +49,15 @@
                 onLoad: function () {
                     $('#messages').text('Start typing password');
                 },
-				//this sample will show you how to add a call back once the final score is calculated. Once calculated, you can adjust it before setting the gui and returning the final score
-				finalScoreCalculated: function (options, totalScoreCalculated, word) {
+		    //this sample will show you how to add a call back once the final score is calculated. Once calculated, you can adjust it before setting the gui and returning the final score
+		    finalScoreCalculated: function (options, totalScoreCalculated, word) {
             
                     //this example if i have 8 characters, i want the min score to be 'medium' (grab the 'medium' score value)
                     var mediumScore = options.ui.scores[2];
                         
-					//if i have a word that is greater then 8 characters (and the total score is less then the 'medium' score)
+		    //if i have a word that is greater then 8 characters (and the total score is less then the 'medium' score)
                     if (word.length >= 8 && totalScoreCalculated < mediumScore) {
-						//return the min score needed for 'medium'
+			//return the min score needed for 'medium'
                         return mediumScore;
                     }
 
