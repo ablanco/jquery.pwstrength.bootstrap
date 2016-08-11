@@ -153,6 +153,10 @@ try {
             }
         });
 
+        if ($.isFunction(options.common.finalScoreCalculated)) {
+		totalScore = options.common.finalScoreCalculated(options, totalScore, word);
+	}
+
         return totalScore;
     };
 }(jQuery, rulesEngine));
