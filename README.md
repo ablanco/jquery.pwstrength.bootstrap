@@ -148,7 +148,7 @@ $(document).ready(function () {
         },
 	    finalScoreCalculated: function (options, totalScoreCalculated, word) {
 	
-	   //use this overload when the calling code wants to modify the final score or run specific steps after the final score has been calculated. The return value is the final score that has been updated or not changed.
+	        //use this overload when the calling code wants to modify the final score or run specific steps after the final score has been calculated. The return value is the final score that has been updated or not changed.
 
             //ok score
             var mediumScore = options.ui.scores[2];
