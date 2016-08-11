@@ -152,6 +152,12 @@ try {
                 }
             }
         });
+		
+		//give the calling code the ability to do whatever it wants with the end score. if callback is registered then use it
+        if (options.common.finalScoreCalculated != null) {
+            //give the callback a way to adjust the score
+            totalScore = options.common.finalScoreCalculated(options, totalScore, word);
+        }
 
         return totalScore;
     };

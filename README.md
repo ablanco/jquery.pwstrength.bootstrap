@@ -133,7 +133,7 @@ That would avoid looking for sequences in the password being tested.
 
 ## Callback Functions
 
-The plugin provides two callback functions, onLoad and onKeyUp.  You can use
+The plugin provides three callback functions, onLoad, onKeyUp, and finalScoreCalculated.  You can use
 them like this:
 
 ```javascript
@@ -145,6 +145,19 @@ $(document).ready(function () {
         },
         onKeyUp: function (evt, data) {
             $("#length-help-text").text("Current length: " + $(evt.target).val().length + " and score: " + data.score);
+        },
+		finalScoreCalculated: function (options, totalScoreCalculated, word) {
+
+            //ok score
+            var mediumScore = options.ui.scores[2];
+
+			//if i meet this criteria i want the score to be atleast 'medium'
+            if (word.length >= 8 && totalScoreCalculated < mediumScore) {
+                return mediumScore;
+            }
+
+            //fallback to the original score
+            return totalScoreCalculated;
         }
     };
     $(':password').pwstrength(options);
