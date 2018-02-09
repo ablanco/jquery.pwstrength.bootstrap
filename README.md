@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/ablanco/jquery.pwstrength.bootstrap.png?branch=master)](https://travis-ci.org/ablanco/jquery.pwstrength.bootstrap)
 [![Code Climate](https://codeclimate.com/github/ablanco/jquery.pwstrength.bootstrap.png)](https://codeclimate.com/github/ablanco/jquery.pwstrength.bootstrap)
 [![devDependency Status](https://david-dm.org/ablanco/jquery.pwstrength.bootstrap/dev-status.png)](https://david-dm.org/ablanco/jquery.pwstrength.bootstrap#info=devDependencies)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fablanco%2Fjquery.pwstrength.bootstrap.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fablanco%2Fjquery.pwstrength.bootstrap?ref=badge_shield)
 
 The jQuery Password Strength Meter is a plugin for Twitter Bootstrap that
 provides rulesets for visualy displaying the quality of a users typed in
@@ -309,3 +310,7 @@ the tests source code in the `spec` directory.
 
 [Travis](https://travis-ci.org/ablanco/jquery.pwstrength.bootstrap) is being
 used for continuos integration. You can check there if the tests are passing.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fablanco%2Fjquery.pwstrength.bootstrap.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fablanco%2Fjquery.pwstrength.bootstrap?ref=badge_large)
