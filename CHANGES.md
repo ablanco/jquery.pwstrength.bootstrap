@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.1.2
+
+- Update dependencies for security patches.
+
 ## 3.1.1
 
 - Fix wordTwoCharacterClasses rule error message not showing up.
