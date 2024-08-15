@@ -1,0 +1,17 @@
+{
+    "wordMinLength": "Uw wachtwoord is te kort",
+    "wordMaxLength": "Uw wachtwoord is te lang",
+    "wordInvalidChar": "Uw wachtwoord bevat ongeldige tekens",
+    "wordNotEmail": "Gebruik niet uw e-mailadres als uw wachtwoord",
+    "wordSimilarToUsername": "Uw wachtwoord mag niet uw gebruikersnaam bevatten",
+    "wordTwoCharacterClasses": "Gebruik verschillende tekens",
+    "wordRepetitions": "Te veel herhalingen",
+    "wordSequences": "Uw wachtwoord gebruikt reeksen",
+    "errorList": "Fouten:",
+    "veryWeak": "Erg zwak",
+    "weak": "Zwak",
+    "normal": "Normaal",
+    "medium": "Gemiddeld",
+    "strong": "Sterk",
+    "veryStrong": "Erg sterk"
+}
