@@ -41,3 +41,4 @@ Lukáš Kovařík <lkovarik11@gmail.com>
 Khalid Moharrum <khalid.moharram@gmail.com>
 Codecamv <https://github.com/Codecamv>
 Mauro José da Silva <https://github.com/maurojs10>
+Craig R Morton <https://github.com/crmpicco>

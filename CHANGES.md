@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.1.4
+
+- Avoid using isNumeric in order to be compatible with jQuery 4.X.
+- Update dependencies for security patches.
+
 ## 3.1.3
 
 -   Add Dutch localization.
