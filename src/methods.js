@@ -195,7 +195,7 @@ var methods = {};
             }
             if (typeof ruleFunction === 'function') {
                 result = ruleFunction(options, $(el).val(), 1);
-                if ($.isNumeric(result)) {
+                if (!isNaN(parseFloat(result)) && isFinite(result)) {
                     rulesMetCnt += result;
                 }
             }

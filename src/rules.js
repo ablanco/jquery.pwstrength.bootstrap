@@ -237,7 +237,7 @@ try {
                     if (result) {
                         totalScore += result;
                     }
-                    if (result < 0 || (!$.isNumeric(result) && !result)) {
+                    if (result < 0 || (isNaN(parseFloat(result)) || !isFinite(result)) && !result) {
                         errorMessage = options.ui.spanError(options, rule);
                         if (errorMessage.length > 0) {
                             options.instances.errors.push(errorMessage);
